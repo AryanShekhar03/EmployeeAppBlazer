@@ -1,0 +1,138 @@
+﻿@page "/Reg"
+@using CommonLayer.Models
+@using BusinessLayer.Interfaces
+
+@inject IRegisterBL registerBL
+<html>
+<head>
+    <title>Employee PayRoll form</title>
+    <link rel="stylesheet" href="~/css/Register.css">
+
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="/IMG/logo.png" alt="image" style="width:56px">
+            <div>
+                <span class="emp-text"> Employee</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <EditForm Model="@empM" OnSubmit="@Create">
+            <div class="form-head"> Employee PayRoll form</div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name.." @bind-value="empM.Name" required>
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="profile">Profile image</label>
+                <div class="profile-radio-content">
+
+                    <label>
+                        <input type="checkbox" name="profile" value="./css/Assets/Ellipse -1.png"@onchange="@(()=> addimg(".IMG/Ellipse -1.png"))" />
+                        <img src="/IMG/Ellipse -1.png">
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="profile2" name="profile" value="/IMG/Ellipse -2.png">
+                        <img class="profile" id='image2' src="/IMG/Ellipse -2.png">
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="profile3" name="profile" value="/IMG/Ellipse -3.png" >
+                        <img class="profile" id='image3' src="/IMG/Ellipse -3.png">
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="profile4" name="profile" value="/IMG/Ellipse -4.png" >
+                        <img class="profile" id='image4' src="/IMG/Ellipse -4.png">
+                    </label>
+                </div>
+            </div>
+            <div class="row-content">
+
+                <label for="gender"><b>Gender</b></label>
+                <select class="ip" name="gender" id="gender" @bind="@empM.Gender" required>
+                    <option value="--">-- Select Gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            
+
+                <label for="gender"><b>Department  </b></label>
+                <select class="ip" name="department" id="gender" @bind="@empM.Department" required>
+                    <option value="--">-- Select Department --</option>
+                    <option value="Male">HR</option>
+                    <option value="Female">Engineer</option>
+                    <option value="Other">Finance</option>
+                    <option value="Other">Business</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="row-content">
+
+                <label class="label text" for="salary">Choose your salary</label>
+                <input class="input" @bind="@empM.Salary" type="number" min="300000" max="500000" step="1000" defaultvalue="400000">
+                <output clas="salary-output text" for="salary">40000</output>
+
+            </div>
+
+            <div class="row-content">
+
+                <label class="label text" for="startDate">Start Date</label>
+                <input class="input" @bind="@empM.StartDate" type="date" />
+
+
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" @bind="@empM.Notes" name="Notes" placeholder="" style="height: 100px"></textarea>
+
+
+            </div>
+
+            <div class="buttonParent">
+                <a href="" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+
+                </div>
+
+            </div>
+
+        </EditForm>
+
+    </div>
+
+</body>
+
+</html>
+
+
+@code {
+    EmployeeModel empM = new EmployeeModel();
+    public void Create()
+    {
+
+        registerBL.AddEmployee(empM);
+
+    }
+    public void addimg(string img)
+    {
+        empM.ProfileImg = img;
+    }
+
+
+}

@@ -1,0 +1,13 @@
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.exe
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.deps.json
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.json
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.runtimeconfig.dev.json
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\CommonLayer\obj\Debug\netcoreapp3.1\CommonLayer.genruntimeconfig.cache
