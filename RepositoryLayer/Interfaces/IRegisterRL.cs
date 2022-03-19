@@ -10,5 +10,11 @@ namespace RepositoryLayer.Interfaces
         public bool AddEmployee(EmployeeModel employeeModel);
 
         public IEnumerable<EmployeeModel> GetAllEmployees();
+
+        public void UpdateEmployee(EmployeeModel employee);
+
+        public EmployeeModel GetEmployeeData(long Id);
+
+        public void DeleteEmployee(long Id);
     }
 }

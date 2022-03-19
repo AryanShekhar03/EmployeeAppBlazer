@@ -29,6 +29,19 @@ namespace BusinessLayer.Services
             }
         }
 
+        public void DeleteEmployee(long Id)
+        {
+            try
+            {
+                this.registerRL.DeleteEmployee(Id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public IEnumerable<EmployeeModel> GetAllEmployees()
         {
             try
@@ -39,6 +52,35 @@ namespace BusinessLayer.Services
             {
                 throw;
 
+            }
+        }
+
+        public EmployeeModel GetEmployeeData(long Id)
+        {
+            try
+            {
+                return this.registerRL.GetEmployeeData( Id);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void UpdateEmployee(EmployeeModel employee)
+        {
+            try
+            {
+
+                 this.registerRL.UpdateEmployee(employee);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

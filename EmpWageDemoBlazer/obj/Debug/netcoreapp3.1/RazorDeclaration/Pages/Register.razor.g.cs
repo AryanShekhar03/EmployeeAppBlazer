@@ -89,6 +89,13 @@ using BusinessLayer.Interfaces;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\Pages\Register.razor"
+using MatBlazor;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Reg")]
     public partial class Register : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,13 +105,19 @@ using BusinessLayer.Interfaces;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 124 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\Pages\Register.razor"
+#line 137 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\Pages\Register.razor"
        
     EmployeeModel empM = new EmployeeModel();
+    bool snackBarSubmit = false;
+    bool snackBarCancel = false;
+    bool snackBarReset = false;
+
     public void Create()
     {
 
         registerBL.AddEmployee(empM);
+        snackBarSubmit = true;
+        this.StateHasChanged();
 
     }
     public void addimg(string img)

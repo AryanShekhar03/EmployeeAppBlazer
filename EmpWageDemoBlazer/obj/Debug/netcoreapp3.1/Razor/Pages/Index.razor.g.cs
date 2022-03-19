@@ -72,6 +72,13 @@ using EmpWageDemoBlazer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

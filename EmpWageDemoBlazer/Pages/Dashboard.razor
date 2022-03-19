@@ -1,0 +1,67 @@
+﻿@page "/Dashboard"
+@using CommonLayer.Models
+
+@using BusinessLayer.Interfaces
+
+@inject IRegisterBL registerBL
+
+<NavLink class="nav-link" href="Reg">
+    <span class="oi oi-plus" aria-hidden="true"></span> Add New
+</NavLink>
+
+<h1>Employee Details</h1>
+@if (employeeModels == null) //IF Emp data not found it will show loading
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>ProfileIMG</th>
+                <th>Notes</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var empM in employeeModels)
+            {
+            <tr>
+                <td>@empM.Id</td>
+                <td>@empM.Name</td>
+                <td>@empM.Gender</td>
+                <td>@empM.Department</td>
+                <td>@empM.ProfileImg</td>
+                <td>@empM.Notes</td>
+                
+                <td>
+                    <a class="nav-link" href="/Update/@empM.Id">
+                        <span class="oi oi-pencil" aria-hidden="true"></span> Edit
+                    </a>
+                    <a class="nav-link" href="/Delete/@empM.Id">
+                        <span class="oi oi-trash" aria-hidden="true"></span> Delete
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    EmployeeModel empM = new EmployeeModel();
+    IEnumerable<EmployeeModel> employeeModels;
+    protected override async Task OnInitializedAsync()//TO Reduce loading time
+    {
+        
+         employeeModels= await Task.Run(() => registerBL.GetAllEmployees());
+    }
+}
+
+
+
+

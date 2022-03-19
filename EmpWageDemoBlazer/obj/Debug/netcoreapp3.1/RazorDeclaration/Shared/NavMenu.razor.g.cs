@@ -75,6 +75,13 @@ using EmpWageDemoBlazer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -83,7 +90,7 @@ using EmpWageDemoBlazer.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\Shared\NavMenu.razor"
+#line 41 "C:\Users\Shivam Shekhar\source\EmpWageDemoBlazer\EmpWageDemoBlazer\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
